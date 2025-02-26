@@ -1,0 +1,72 @@
+[
+    {
+        "question_type": "technology",
+        "question": "Here's a technology question for you:\n\nWhat is the main difference between a VPN (Virtual Private Network) and a proxy server, and in what scenarios would you use each?\n\nThink you know the answer, or would you like a hint to get started?",
+        "answer": "i don't know",
+        "feedback": "y",
+        "timestamp": "2025-02-26T16:53:57.418413"
+    },
+    {
+        "question_type": "technology",
+        "question": "Here's a technology question for you:\n\nWhat is the main difference between a CPU (Central Processing Unit) and a GPU (Graphics Processing Unit), and how do they work together to enhance the performance of a computer?\n\nThink you know the answer? Give it a try!",
+        "answer": "a cpu is like used when for daily tasked not where too much computaion is needed, on the other hand gpu used for calculating huge amount of data like tensors and all",
+        "feedback": "y",
+        "timestamp": "2025-02-26T16:59:41.787350"
+    },
+    {
+        "question_type": "technology",
+        "question": "I'd be happy to help you learn something new today. Here's a question:\n\nWhat is the main difference between a CPU (Central Processing Unit) and a GPU (Graphics Processing Unit), and how do they work together to improve the performance of a computer?\n\nThink you know the answer, or would you like a hint to get started?",
+        "answer": "the cpu is used for taks like loading operating system and used for small tasks on the otherhand the gpu is used for complex problems like image generation and training a machine learning model or the task which containes huge amount of data",
+        "feedback": "y",
+        "timestamp": "2025-02-26T17:17:32.154858"
+    },
+    {
+        "question_type": "technology",
+        "question": "I see you've provided some examples of technology questions. Let's try something new. Here's a question for you:\n\nWhat is the difference between a relational database and a NoSQL database, and in what scenarios would you choose to use each?\n\nThink you know the answer, or would you like a hint to get started?",
+        "answer": "relational database is like where the relation ship between 2 or more values will be there, No sql measn no structure will be there in the data",
+        "feedback": "n",
+        "timestamp": "2025-02-26T17:38:32.784963"
+    },
+    {
+        "question_type": "technology",
+        "question": "What is the difference between a relational database and a NoSQL database, and in what scenarios would you choose to use each?",
+        "answer": "relational data base is uses rows and columns this is suitable when the data contained relations between values and nosql is where there will be no relation or semi relation between the data it is widely used in unstructured the data",
+        "feedback": "n",
+        "timestamp": "2025-02-26T17:43:22.657327"
+    },
+    {
+        "question_type": "technology",
+        "question": "What is the difference between a relational database and a NoSQL database, and in what scenarios would you choose to use each?",
+        "answer": "i don't know",
+        "feedback": "n",
+        "timestamp": "2025-02-26T17:54:14.426877"
+    },
+    {
+        "question_type": "technology",
+        "question": "What's the difference between Edge Computing and Cloud Computing, and how do they impact data processing and storage?",
+        "answer": "i don't know the answer",
+        "feedback": "y",
+        "timestamp": "2025-02-26T17:59:12.422371"
+    },
+    {
+        "question_type": "technology",
+        "question": "What's the difference between a Blockchain and a Distributed Hash Table, and how are they used in modern tech applications?",
+        "answer": "i don't know",
+        "feedback": "y",
+        "timestamp": "2025-02-26T18:00:22.377166"
+    },
+    {
+        "question_type": "ai",
+        "question": "What's the difference between Natural Language Processing (NLP) and Natural Language Generation (NLG), and how are they applied in AI systems?",
+        "answer": "i don't know",
+        "feedback": "y",
+        "timestamp": "2025-02-26T18:07:00.024432"
+    },
+    {
+        "question_type": "deep learning",
+        "question": "What's the difference between Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs), and how are they used in deep learning applications?",
+        "answer": "i don't know",
+        "feedback": "y",
+        "timestamp": "2025-02-26T18:10:51.712414"
+    }
+]

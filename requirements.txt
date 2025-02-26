@@ -1,0 +1,6 @@
+langchain_groq
+langchain_huggingface
+kokoro
+sounddevice
+langchain
+langchain_core
