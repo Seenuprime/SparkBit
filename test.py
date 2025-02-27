@@ -8,6 +8,8 @@ import datetime
 from kokoro.pipeline import KPipeline
 import sounddevice as sd
 import warnings 
+import time as t
+from datetime import datetime, time
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -28,7 +30,7 @@ def say_it(text):
 api_key = os.getenv("CHARGOR_API")
 llm = ChatGroq(model='llama-3.3-70b-versatile', api_key=api_key)
 
-QUESTION_TYPES = ["trivia", "space", "technology", "physics", "statistics", "machine learning", "ai", "simple-coding", 'deep learning']
+QUESTION_TYPES = ["trivia", "space", "technology", "physics", "statistics", "machine learning", "ai", 'deep learning', "computer vision"]
 PREVIOUS_QUESTIONS = []
 
 history_file = "concepts.json"
@@ -72,7 +74,7 @@ def run_bytescolar():
 
     user_answer = input("Your answer: ").strip()
 
-    correct_answer_prompt = f"Check if '{user_answer}' fits '{question}'. If it's right, say 'Sweet, you nailed it!' If user say don't know the answer, give the answer '—keep it friendly."
+    correct_answer_prompt = f"Check if '{user_answer}' fits '{question}'. If it's right, say 'Sweet, you nailed it!' If user say don't know the answer, give the answer"
     correct_answer = llm.invoke(correct_answer_prompt).content.strip()
 
     print(f"\n{correct_answer}")
@@ -85,7 +87,7 @@ def run_bytescolar():
         "question": question,
         "answer": user_answer,
         "feedback": feedback,
-        "timestamp": datetime.datetime.now().isoformat()
+        "timestamp": datetime.now().isoformat()
     }
     history.append(integration)
     save_history(history)
@@ -96,4 +98,6 @@ def run_bytescolar():
         print(f"No worries, I'll switch it up next time!\n")
 
 if __name__ == "__main__":
-    run_bytescolar()
+    while datetime.now().time() < time(17, 30):
+        run_bytescolar()
+        t.sleep(30 * 60)

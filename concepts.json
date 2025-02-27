@@ -68,5 +68,68 @@
         "answer": "i don't know",
         "feedback": "y",
         "timestamp": "2025-02-26T18:10:51.712414"
+    },
+    {
+        "question_type": "space",
+        "question": "What is Fast Radio Burst (FRB) and how do astronomers use them to study the universe?",
+        "answer": "i don't know",
+        "feedback": "y",
+        "timestamp": "2025-02-27T10:01:18.805652"
+    },
+    {
+        "question_type": "statistics",
+        "question": "What's the difference between Type I and Type II errors in statistical hypothesis testing, and how do they impact the interpretation of results?",
+        "answer": "type I error is like when the actual value is false but the predicted velue is true, the type II error is like the actual value is true but predicted is false, it is very crusial like if someone not having any desease upon the prediction we say you have a desease it could cause the patient to go panic and with it is not true",
+        "feedback": "y",
+        "timestamp": "2025-02-27T10:08:29.845908"
+    },
+    {
+        "question_type": "technology",
+        "question": "What's the difference between Homomorphic Encryption and Zero-Knowledge Proofs, and how are they used to secure data in transit and at rest?",
+        "answer": "i dont know the answer, you tell me",
+        "feedback": "y",
+        "timestamp": "2025-02-27T10:34:39.614226"
+    },
+    {
+        "question_type": "deep learning",
+        "question": "What's the difference between Transformers and Recurrent Neural Networks (RNNs) in natural language processing tasks, and how do their architectures impact performance?",
+        "answer": "transformers are made up of encoders and decoders, RNNs are like neural network which is used for time series analysis and in Natural language processing",
+        "feedback": "y",
+        "timestamp": "2025-02-27T11:11:26.550296"
+    },
+    {
+        "question_type": "ai",
+        "question": "What's the difference between Explainable AI (XAI) and Transparent AI, and how do they contribute to building trust in AI decision-making systems?",
+        "answer": "i don't know",
+        "feedback": "y",
+        "timestamp": "2025-02-27T11:52:48.077433"
+    },
+    {
+        "question_type": "computer vision",
+        "question": "What's the difference between Semantic Segmentation and Instance Segmentation in computer vision, and how are they applied in object detection tasks?",
+        "answer": "semantic segmentation is detecting objects in the image and instance segmentation is dividing each pixel into group and giving each pixel name is called as instance segmentation",
+        "feedback": "y",
+        "timestamp": "2025-02-27T12:28:00.695288"
+    },
+    {
+        "question_type": "ai",
+        "question": "What's the difference between Neuromorphic Computing and Traditional Computing, and how do they approach artificial intelligence and machine learning problems?",
+        "answer": "I DON;T KNOW",
+        "feedback": "y",
+        "timestamp": "2025-02-27T14:16:02.276317"
+    },
+    {
+        "question_type": "machine learning",
+        "question": "What's the difference between Meta-Learning and Transfer Learning in machine learning, and how are they used to improve model performance on new tasks?",
+        "answer": "i don't know about the meta-learning but the transfer learning is the models which are already trained on the data which are called prebuild models where we can utilize those models to use for our needs litly tweeking it or just using the same architecture",
+        "feedback": "y",
+        "timestamp": "2025-02-27T14:51:58.577329"
+    },
+    {
+        "question_type": "statistics",
+        "question": "What's the difference between Bayesian inference and frequentist inference in statistical analysis?",
+        "answer": "i don't know the answer",
+        "feedback": "y",
+        "timestamp": "2025-02-27T17:26:13.392399"
     }
 ]
