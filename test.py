@@ -10,6 +10,7 @@ import sounddevice as sd
 import warnings 
 import time as t
 from datetime import datetime, time
+import threading
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -30,7 +31,7 @@ def say_it(text):
 api_key = os.getenv("CHARGOR_API")
 llm = ChatGroq(model='llama-3.3-70b-versatile', api_key=api_key)
 
-QUESTION_TYPES = ["trivia", "space", "technology", "physics", "statistics", "machine learning", "ai", 'deep learning', "computer vision"]
+QUESTION_TYPES = ["trivia", "space", "technology", "physics", "statistics", "machine learning", 'deep learning', "computer vision"]
 PREVIOUS_QUESTIONS = []
 
 history_file = "concepts.json"
@@ -43,7 +44,7 @@ def load_history():
                 content = file.read().strip()
                 if content:
                     data = json.loads(content)
-                    PREVIOUS_QUESTIONS = [item["question"] for item in data]
+                    PREVIOUS_QUESTIONS = [item["question"] for item in data[-10:]]
                     return data
                 return []
         except json.JSONDecodeError:
@@ -72,32 +73,37 @@ def run_bytescolar():
     print(f"[{question_type.capitalize()}] {question}")
     say_it(f"Here's a quick one: {question}")
 
-    user_answer = input("Your answer: ").strip()
+    user_answer = ''
+    def get_answer():
+        global user_answer
+        user_answer = input("Your answer: ").strip()
 
-    correct_answer_prompt = f"Check if '{user_answer}' fits '{question}'. If it's right, say 'Sweet, you nailed it!' If user say don't know the answer, give the answer"
-    correct_answer = llm.invoke(correct_answer_prompt).content.strip()
+    input_thread = threading.Thread(target=get_answer)
+    input_thread.start()
+    input_thread.join(timeout=30)
+
+    if user_answer:
+        correct_answer_prompt = f"Check if '{user_answer}' fits '{question}'. If it's right, say 'Sweet, you nailed it!' If user say don't know the answer, give the answer"
+        correct_answer = llm.invoke(correct_answer_prompt).content.strip()
+    else:
+        correct_answer = llm.invoke(f"give Answer for this question breifly in understandable way (don't include charecters like '*:#@' and all): {question}").content.strip()
 
     print(f"\n{correct_answer}")
     say_it(correct_answer)
-
-    feedback = input("\nDid you like this one? (y/n): ").strip().lower()
 
     integration = {
         "question_type": question_type,
         "question": question,
         "answer": user_answer,
-        "feedback": feedback,
+        "feedback": None,
         "timestamp": datetime.now().isoformat()
     }
     history.append(integration)
     save_history(history)
 
-    if feedback == "y":
-        print(f"Cool, I'll stick with {question_type} vibes next time!\n")
-    else:
-        print(f"No worries, I'll switch it up next time!\n")
+    print("wait for the next question!")
 
 if __name__ == "__main__":
     while datetime.now().time() < time(17, 30):
         run_bytescolar()
-        t.sleep(30 * 60)
+        t.sleep(20 * 60)
